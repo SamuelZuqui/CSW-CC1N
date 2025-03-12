@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 05</title>
+</head> 
+<body>
+    
+    <h2> <b> 4 FERRAMENTAS TI UTILIZADAS NA BIBLIOTECA ANA BOVE </b></h1>  
+    <h3>4.1 Sobre a Biblioteca Ana Bove e sua instituição mantenedora</h3>
+    <h4>4.1.1 O Imip</h4>
+    <h4>4.1.2 A Biblioteca Ana Bove</h4>
+    <h3>4.2 Diagnóstico tecnológico da Biblioteca Ana Bove</h3>
+<br>
+<br>
+<hr>
+
+<h1>Principais formatações</h1>
+<br>
+<h2>Negrito / Destaque</h2>
+<p>Na frase temos uma <b>parte do texto em negrito</b> usando a tag B (não semântica)</p>
+<p>Na frase temos uma <strong>parte do texto em negrito</strong> usando a tag strong (com semântica)</p>
+<br>
+<h2>Itálico / Ênfase</h2>
+<p>Na frase vamos entrar com uma palavra em <i>itálico</i> usando a tag i (não semântica)</p>
+<p>Na frase vamos entrar com uma palavra em <em>itálico</em> usando a tag EM (com semântica)</p>
+<br>
+<h2>Texto Marcador</h2>
+<p>Aqui vamos usar um texto com destaque <mark style="background:green"> de marcador de texto</mark> usando mark  </p>
+<p>Aqui vamos usar um texto com destaque <mark style="background:yellow(238, 255, 0)"> de marcador de texto</mark> usando mark </p>
+<br>
+<h2>Texto grande e pequeno</h2>
+<p>Estamos trabalhando aqui com um <big>texto grande</big> e um <small>texto pequeno</small> nesta frase</p>
+<br>
+<h2>Texto deletado</h2>
+<p>Neste parágrafo vamos trabalhar com um texto <del>que foi excluído</del> da frase</p>
+<br>
+<h2>Texto inserido</h2>
+<p>Nesta frase vamos demontrar como <u>destacar um texto inserido</u> na frase de forma não semântica </p>
+<p>Nesta frase vamos demontrar como <ins>destacar um texto inserido</ins> na frase de forma semântica </p>
+<br>
+<h2>Texto sobrescrito</h2>
+<p>Vamos demonstrar uma formula da equação do segundo grau ax<sup>2</sup> + bx + c = 0 usando tag sup</p>
+<br>
+<h2>Texto subescrito</h2>
+<p>Vamos demonstrar o texto subescrito com a fórmula da água H<sub>2</sub>O</p>
+<br>
+<h2>Trecho de código fonte</h2>
+<p>Neste exemplo vou demonstrar um trecho de código fonte python
+    <pre>
+        <code>
+            import numpy as np
+import pandas as pd
+
+# Função para detectar e remover outliers com base no IQR (Intervalo Interquartil)
+def remove_outliers(df):    
+    # Calcular os quartis Q1 (25%) e Q3 (75%)
+    Q1 = df.quantile(0.25)
+    Q3 = df.quantile(0.75)
+    
+    # Calcular o intervalo interquartil (IQR)
+    IQR = Q3 - Q1
+    
+    # Definir limites inferior e superior para os dados
+    lower_limit = Q1 - 1.5 * IQR
+    upper_limit = Q3 + 1.5 * IQR
+    
+    # Filtrar os dados, removendo os outliers
+    filtered_df = df[(df >= lower_limit) & (df <= upper_limit)]
+    
+    # Remover linhas com valores NaN (resultantes de valores fora dos limites)
+    filtered_df = filtered_df.dropna()
+    
+    return filtered_df
+
+# Exemplo de dados com outliers
+data = {
+    'coluna1': [10, 12, 14, 100, 15, 16, 18, 20, 25, 30],
+    'coluna2': [1, 3, 4, 5, 1000, 6, 7, 8, 9, 10]
+}
+
+# Criar DataFrame
+df = pd.DataFrame(data)
+
+# Mostrar dados originais
+print("Dados originais:")
+print(df)
+
+# Remover outliers
+df_sem_outliers = remove_outliers(df)
+
+# Mostrar dados após remoção de outliers
+print("\nDados após remoção de outliers:")
+print(df_sem_outliers)
+
+        </code>
+    </pre>
+</p>
+
+
+
+
+
+
+
+
+</body>
+</html> 
